@@ -1,0 +1,36 @@
+//For loop
+//@for $var from <start> through <end>
+
+// @for $space from 1 through 6 {
+//     .pt-top-#{$space}
+//     {
+//         padding-top: 10px * $space;
+//     }
+// }
+// @for $space from 1 through 6 {
+//     $width: percentage ( 1 / $space);    
+//     .column-#{$space}
+//     {
+//         width: $width;
+//     }
+// }
+
+
+
+//WHILE loop
+
+// @while $var something int
+
+$num: 1;
+
+@while $num < 7 
+{
+    $width: percentage( 1 / $num);
+
+    .column-#{$num}
+    {
+        width: $width;
+    }
+    $num: $num + 1;
+}
+//EACH loop
