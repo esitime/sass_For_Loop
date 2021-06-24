@@ -33,4 +33,31 @@ $num: 1;
     }
     $num: $num + 1;
 }
+
 //EACH loop
+// @each key, value in array{}
+
+$white: #fff;
+$black: #000;
+$red: #F00;
+$primary: #CCC;
+$secondary: #333;
+$colours: (
+    'white': $white,
+    'black': $black,
+    'red': $red,
+    'primary': $primary,
+    'secondary': $secondary
+);
+
+@each $colour, $hex in $colours
+{
+    .text-#{$colour}
+    {
+        color: $hex;
+    }
+    .background-#{$colour}
+    {
+        background-color: $hex;
+    }
+}
